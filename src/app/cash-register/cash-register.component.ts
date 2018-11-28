@@ -25,5 +25,6 @@ export class CashRegisterComponent implements OnInit {
     console.log(this.product);
     // this.products.concat(product);
     this._cashService.registerProduct(this.product);
+    this.registerForm.reset();
   }
 }
