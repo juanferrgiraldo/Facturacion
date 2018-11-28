@@ -1,0 +1,6 @@
+<form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+  <div class="formGroup">
+    <input type="text" placeholder="Código de producto" formControlName="productCode" [formGroup]="registerForm">
+  </div>
+  <button class="btn btn-success" type="submit" [disabled]="registerForm.invalid">Registrar</button>
+</form>
