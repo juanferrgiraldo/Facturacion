@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,22 +7,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  loginForm: FormGroup;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
-    this.loginForm = new FormGroup({
-      username: new FormControl(null, Validators.required),
-      password: new FormControl(null, Validators.required)
-    });
-  }
+  ngOnInit() { }
 
-  onLogin(name) {
-    const userCredentials = {
-      username: this.loginForm.value.username,
-      password: this.loginForm.value.password
-    };
+  onNewBill() {
+    this.router.navigate(['caja']);
   }
 
 }

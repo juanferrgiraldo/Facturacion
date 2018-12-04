@@ -1,3 +1,17 @@
 <p>
   {{product}}
 </p>
+<form *ngIf="asyncProduct | async; else loading" [formGroup]="ClientForm">
+  <label for="firstname">Product</label>
+  <input id="firstname" formControlName="firstName" />  
+
+  <label for="lastname">Last Name</label>
+  <input id="lastname" formControlName="lastName" />
+  <div *ngIf="form.controls.lastName.errors?.required && form.controls.lastName.touched" class="error">
+    *Required
+  </div>
+</form>
+
+<ng-template #loading>
+  Loading User...
+</ng-template>

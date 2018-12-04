@@ -1,13 +1,1 @@
-<form class="form-group" [formGroup]="loginForm" (ngSubmit)="onLogin()">  
-  <div class="formGroup">
-    <input type="text" id="username" placeholder="Nombre de usuario" formControlName="username" [formGroup]="loginForm">
-  </div>
-  <span *ngIf="loginForm.get('username').touched && !loginForm.get('username').valid && loginForm.get('username').dirty">
-    <strong>Por favor ingrese un nombre válido</strong>
-  </span>
-  <div class="formGroup">
-    <input type="password" id="password" placeholder="Contraseña" formControlName="password" [formGroup]="loginForm">
-  </div>
-  <hr>
-  <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Ingresar</button>
-</form>
+<button type="submit" class="btn btn-primary" (click)="onNewBill()">Nueva factura</button>

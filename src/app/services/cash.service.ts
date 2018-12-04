@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
+
+import { Product } from '../cash-register/product.interface';
 
 @Injectable()
 export class CashService {
