@@ -11,6 +11,9 @@ export class CashUserComponent implements OnInit {
   constructor(private _cashService: CashService) { }
 
   ngOnInit() {
-    this._cashService.currentProduct.subscribe(product => this.product = product);
+    this._cashService.currentProduct.subscribe(product => {
+      this.product = product;
+      this.product = this.product.product;
+    });
   }
 }

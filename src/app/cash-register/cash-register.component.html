@@ -2,5 +2,10 @@
   <div class="formGroup">
     <input type="text" placeholder="Código de producto" formControlName="productCode" [formGroup]="registerForm">
   </div>
-  <button class="btn btn-success" type="submit" [disabled]="registerForm.invalid">Registrar</button>
+  <button class="btn btn-primary" type="submit" [disabled]="registerForm.invalid">Registrar</button>
 </form>
+<hr>
+<button class="btn btn-primary" (click)="onPay()">Pagar</button>
+<!--<li *ngFor= "product of productsObs | async as products; let i = index">
+  {{product.name}}
+</li>-->
